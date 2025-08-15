@@ -1,0 +1,13 @@
+# printing odd in list from n to 1
+def oddrec(n):
+  if n==0:
+    return
+  else:
+    if n%2!=0:
+      print(n,end=" ")
+      oddrec(n-1)
+      print(n,end=" ")
+    else:
+      oddrec(n-1)
+n=int(input())
+oddrec(n)
