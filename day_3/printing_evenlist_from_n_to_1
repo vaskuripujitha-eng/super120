@@ -1,0 +1,13 @@
+#printing even in list from n to 1
+def evenrec(n):
+  if n==0:
+    return
+  else:
+    if n%2==0:
+      print(n,end=" ")
+      evenrec(n-1)
+      print(n,end=" ")
+    else:
+      evenrec(n-1)
+n=int(input())
+evenrec(n)
