@@ -1,0 +1,10 @@
+#finding min
+def find_min(index,n):
+  if index==len(n)-1:
+    return n[index]
+  min=find_min(index+1,n)
+  if n[index]<min:
+    return n[index]
+  return min
+n=list(map(int,input().split()))
+print(find_min(0,n))
