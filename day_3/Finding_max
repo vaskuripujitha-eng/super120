@@ -1,0 +1,10 @@
+#finding max
+def find_max(index,n):
+  if index==len(n)-1:
+    return n[index]
+  max=find_max(index+1,n)
+  if n[index]>max:
+    return n[index]
+  return max
+n=list(map(int,input().split()))
+print(find_max(0,n))
