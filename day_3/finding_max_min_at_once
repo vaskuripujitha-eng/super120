@@ -1,0 +1,12 @@
+#finnding max and min at once
+def find_min_max(index,n):
+  if index==len(n)-1:
+    return n[index],n[index]
+  min,max=find_min_max(index+1,n)
+  if n[index]<min:
+    min=n[index]
+  if n[index]>max:
+    max=n[index]
+  return min,max
+n=list(map(int,input().split()))
+print(find_min_max(0,n))
